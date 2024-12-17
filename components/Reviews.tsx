@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { User, Star } from 'lucide-react';
 
 type Testimonial = {
     name: string;
@@ -81,8 +81,8 @@ const TestimonialCarousel = ({ testimonials }: { testimonials: Testimonial[] }) 
             <AnimatePresence mode="wait">
                 <TestimonialCard key={currentIndex} testimonial={testimonials[currentIndex]} />
             </AnimatePresence>
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-8">
-                {/*                 <motion.button
+            {/*             <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-8">
+                <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={prevTestimonial}
@@ -95,8 +95,8 @@ const TestimonialCarousel = ({ testimonials }: { testimonials: Testimonial[] }) 
                     onClick={nextTestimonial}
                     className="bg-white rounded-full p-2 shadow-md focus:outline-none translate-x-4">
                     <ChevronRight className="w-6 h-6 text-orange-500" />
-                </motion.button> */}
-            </div>
+                </motion.button>
+            </div> */}
         </div>
     );
 };

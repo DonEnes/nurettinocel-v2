@@ -57,7 +57,7 @@ export const AboutEnd = () => {
                         {/* Quote */}
                         <div className="space-y-4">
                             <p className="text-base sm:text-lg italic">
-                                "Ich bin kein einfacher Webdesigner. Ich bin die beste Investition für dein Unternehmen."
+                                &quot;Ich bin kein einfacher Webdesigner. Ich bin die beste Investition für dein Unternehmen.&quot;
                             </p>
                             <Image src="/signature.png" alt="Signature" width={250} height={50} className="mt-2" />
                         </div>

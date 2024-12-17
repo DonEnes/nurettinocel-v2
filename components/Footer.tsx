@@ -19,7 +19,7 @@ export const Footer = () => {
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <h3 className="text-xl font-semibold mb-6 text-black">Schnelllinks</h3>
                         <ul className="space-y-3">
-                            {['Über Mich', 'Leistungen', 'Portfolio', 'Kontakt'].map((item, index) => (
+                            {['Über Mich', 'Leistungen', 'Portfolio', 'Kontakt'].map((item) => (
                                 <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 300 }}>
                                     <Link
                                         href={`/#${item.toLowerCase().replace(' ', '-')}`}

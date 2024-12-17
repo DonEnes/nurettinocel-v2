@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, MessageCircle, Calendar, Phone } from 'lucide-react';
+import { ChevronDown, MessageCircle, Calendar, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 const faqs = [
