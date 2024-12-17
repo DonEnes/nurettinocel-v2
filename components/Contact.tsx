@@ -63,7 +63,7 @@ export const Contact = () => {
                         </div>
                     </motion.div>
 
-                    <motion.form
+                    {/* <motion.form
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -125,7 +125,7 @@ export const Contact = () => {
                                 <Send className="ml-2 h-5 w-5" />
                             </motion.button>
                         </div>
-                    </motion.form>
+                    </motion.form> */}
                 </div>
             </div>
         </section>
