@@ -9,14 +9,15 @@ import { FAQ } from '@/components/FAQ';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { Reviews } from '@/components/Reviews';
-import { Announce } from '@/components/Announce';
+import { AboutEnd } from '@/components/AboutEnd';
+/* import { Announce } from '@/components/Announce'; */
 import { Navbar } from '@/components/Navbar';
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-white text-gray-900">
             <Navbar />
-            <Announce />
+            {/*             <Announce /> */}
             <Hero />
             <Seperable />
             <Quote />
@@ -24,6 +25,7 @@ export default function Home() {
             <Services />
             <FAQ />
             <Reviews />
+            <AboutEnd />
             <Contact />
             <Footer />
         </main>
