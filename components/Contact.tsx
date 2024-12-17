@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Send, Mail, User, MessageSquare } from 'lucide-react';
+import { Mail, User, MessageSquare } from 'lucide-react';
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ export const Contact = () => {
         message: '',
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    /*     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
@@ -26,7 +26,7 @@ export const Contact = () => {
 
     const inputVariants = {
         focus: { scale: 1.02, transition: { duration: 0.2 } },
-    };
+    }; */
 
     return (
         <section id="contact" className="py-20 bg-gradient-to-b from-white to-orange-50">
