@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+/* import { useState } from 'react'; */
 import { Mail, User, MessageSquare } from 'lucide-react';
 
 export const Contact = () => {
-    const [formData, setFormData] = useState({
+    /*     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
-    });
+    }); */
 
     /*     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
