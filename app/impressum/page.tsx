@@ -19,7 +19,7 @@ export default function Impressum() {
                     <p>
                         Telefon: +49 176 22629431
                         <br />
-                        E-Mail: nurettin.oecel@ocel-gruppe.com
+                        E-Mail: info@nurettinocel.de
                     </p>
 
                     <h2 className="text-xl font-semibold mt-6 mb-4">Umsatzsteuer-ID</h2>
