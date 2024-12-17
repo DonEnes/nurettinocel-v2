@@ -24,7 +24,7 @@ export const About = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="space-y-6">
-                        <h2 className="text-4xl font-bold mb-4 text-gray-900">Ich bin kein einfacher Webdesigner.</h2>
+                        <h2 className="text-4xl font-bold mb-4 text-gray-900">Ich bin kein einfacher Fullstack Entwickler.</h2>
                         <p className="text-xl text-gray-600 mb-8">Ich bin die beste Investition für dein Unternehmen.</p>
                         <ul className="space-y-4">
                             <li className="flex items-center space-x-3">
