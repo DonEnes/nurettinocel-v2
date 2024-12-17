@@ -49,7 +49,7 @@ export const Contact = () => {
                             <div className="space-y-4">
                                 <div className="flex items-center">
                                     <Mail className="w-6 h-6 text-orange-500 mr-3" />
-                                    <span>info@nurettinocel.de</span>
+                                    <span>kontakt@nurettinocel.de</span>
                                 </div>
                                 <div className="flex items-center">
                                     <User className="w-6 h-6 text-orange-500 mr-3" />

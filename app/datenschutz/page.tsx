@@ -38,7 +38,7 @@ export default function Datenschutz() {
                     <p>
                         Telefon: +49 176 22629431
                         <br />
-                        E-Mail: info@nurettinocel.de
+                        E-Mail: kontakt@nurettinocel.de
                     </p>
 
                     <h2 className="text-xl font-semibold mt-6 mb-4">3. Datenerfassung auf unserer Website</h2>

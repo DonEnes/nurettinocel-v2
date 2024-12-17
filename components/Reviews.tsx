@@ -68,13 +68,13 @@ const TestimonialCarousel = ({ testimonials }: { testimonials: Testimonial[] }) 
         return () => clearInterval(timer);
     }, [testimonials.length]);
 
-    const nextTestimonial = () => {
+    /*     const nextTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     };
 
     const prevTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
-    };
+    }; */
 
     return (
         <div className="relative">
