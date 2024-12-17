@@ -46,7 +46,7 @@ export const FAQ = () => {
                 scrollToSection('contact');
                 break;
             case 'call':
-                window.location.href = 'tel:+491234567890';
+                window.location.href = 'tel:+4917622629431';
                 break;
             default:
                 break;
