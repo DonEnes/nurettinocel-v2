@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Footer = () => {
@@ -53,11 +53,20 @@ export const Footer = () => {
                             <motion.a
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                href="https://www.instagram.com/nurettinocel_/?locale=us&hl=am-et"
+                                href="https://www.instagram.com/nurettinocel_"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-orange-600 p-3 rounded-full text-black hover:bg-orange-700 transition-colors">
+                                className="bg-orange-500 p-3 rounded-full text-black hover:bg-orange-600 transition-colors">
                                 <Instagram className="w-6 h-6" />
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-orange-500 p-3 rounded-full text-black hover:bg-orange-600 transition-colors">
+                                <Linkedin className="w-6 h-6" />
                             </motion.a>
                         </div>
                     </motion.div>
@@ -69,10 +78,10 @@ export const Footer = () => {
                     className="mt-12 pt-8 border-t border-black text-center">
                     <p className="text-black">&copy; {currentYear} Nurettin Öcel. Alle Rechte vorbehalten.</p>
                     <div className="mt-4 space-x-4">
-                        <Link href="/impressum" className="text-black hover:text-white transition-colors">
+                        <Link href="/impressum" className="text-black hover:text-orange-500 transition-colors">
                             Impressum
                         </Link>
-                        <Link href="/datenschutz" className="text-black hover:text-white transition-colors">
+                        <Link href="/datenschutz" className="text-black hover:text-orange-500 transition-colors">
                             Datenschutz
                         </Link>
                     </div>

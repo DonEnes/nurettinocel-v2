@@ -22,8 +22,8 @@ export const AboutEnd = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className="absolute left-[-240px] sm:left-[-330px] top-1/2 -translate-y-1/2 transform -rotate-90 origin-center">
-                            <span className="text-7xl sm:text-7xl lg:text-7xl tracking-wider text-black whitespace-nowrap">Webdesigner</span>
+                            className="absolute left-[-200px] sm:left-[-330px] top-1/2 -translate-y-1/2 transform -rotate-90 origin-center">
+                            <span className="text-6xl sm:text-7xl lg:text-8xl tracking-wider text-black whitespace-nowrap">Webdesigner</span>
                         </motion.div>
                     </div>
 
