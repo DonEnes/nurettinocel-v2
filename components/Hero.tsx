@@ -8,7 +8,7 @@ export const Hero = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0">
-                <Image src="/coden.jpg" alt="Hero Background" layout="fill" objectFit="cover" quality={100} />
+                <Image src="/backgrounds/coden.jpg" alt="Hero Background" layout="fill" objectFit="cover" quality={100} />
             </div>
 
             <div className="absolute inset-0 bg-black bg-opacity-60" />

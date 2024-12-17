@@ -75,13 +75,13 @@ export const FAQ = () => {
                         className="bg-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300 mr-4">
                         Jetzt Erstgespräch buchen
                     </motion.button>
-                    <motion.button
+                    {/*                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => scrollToSection('contact')}
                         className="bg-white text-orange-500 px-6 py-3 rounded-full text-lg font-semibold border border-orange-500 hover:bg-orange-50 transition duration-300">
                         Kontaktanfrage senden
-                    </motion.button>
+                    </motion.button> */}
                 </div>
             </div>
         </section>

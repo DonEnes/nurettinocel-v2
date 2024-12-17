@@ -18,7 +18,7 @@ export const Quote = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="text-2xl md:text-4xl text-white">
+                        className="text-1xl md:text-3xl text-white">
                         &quot;Mit mir setzt du auf ein Webdesigner mit Full-Service-Konzept, der kleine und mittelständische Unternehmen
                         voranbringt.&quot;
                         <br />
