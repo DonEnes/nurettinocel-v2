@@ -98,14 +98,14 @@ export const About = () => {
                                     {/* Vertical dashed line */}
                                     {index !== features.length - 1 && (
                                         <div
-                                            className="absolute left-0 top-12 w-0 h-[calc(100%-24px)] border-l-2 border-dashed border-orange-400/40"
+                                            className="absolute left-8 top-12 w-0 h-[calc(100%-24px)] border-l-2 border-dashed border-orange-400/40"
                                             style={{ transform: 'translateX(-50%)' }}
                                         />
                                     )}
 
                                     {/* Circle with Check Icon */}
                                     <div
-                                        className="absolute left-0 top-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                                        className="absolute left-8 top-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
                                         style={{ transform: 'translateX(-50%)' }}>
                                         <Check className="w-6 h-6 text-white" />
                                     </div>
