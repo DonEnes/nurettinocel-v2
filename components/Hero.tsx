@@ -21,12 +21,12 @@ export const Hero = () => {
                 />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 max-w-8xl mx-auto px-8 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="space-y-8 max-w-3xl">
+                    className="space-y-5 max-w-3xl">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -40,7 +40,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                        className="text-4xl md:text-6xl font-bold text-white leading-tight">
                         Nurettin Öcel
                         <br />
                         <span className="bg-gradient-to-r from-orange-500 to-orange-300 text-transparent bg-clip-text">Webdesigner & Entwickler</span>
@@ -50,7 +50,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-lg text-gray-300 max-w-2xl">
+                        className="text-base text-gray-300 max-w-2xl">
                         Individuelle Webdesign-Lösungen mit modernsten Technologien für kleine und mittelständische Unternehmen in Deutschland
                     </motion.p>
 
@@ -61,9 +61,7 @@ export const Hero = () => {
                             whileTap={{ scale: 0.95 }}
                             className="inline-flex items-center bg-gradient-to-r from-[#FF7051] to-[#FFC371] text-white px-8 py-3 rounded-full text-base font-medium group">
                             Was ich anbiete
-                            <motion.span initial={{ x: 0 }} animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-                                <Rocket className="ml-2 w-5 h-5" />
-                            </motion.span>
+                            <Rocket className="ml-2 w-5 h-5" />
                         </motion.a>
                     </motion.div>
                 </motion.div>

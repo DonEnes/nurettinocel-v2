@@ -44,8 +44,8 @@ export const Contact = () => {
 
                 <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
                     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:w-1/3">
-                        <div className="bg-white p-12 rounded-lg shadow-lg">
-                            <h3 className="text-3xl font-semibold mb-4">Kontaktinformationen</h3>
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <h3 className="text-2xl font-semibold mb-4">Kontaktinformationen</h3>
                             <div className="space-y-4">
                                 <div className="flex items-center">
                                     <Mail className="w-6 h-6 text-orange-500 mr-3" />
