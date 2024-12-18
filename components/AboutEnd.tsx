@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Star } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 
 export const AboutEnd = () => {
     return (
@@ -16,7 +16,7 @@ export const AboutEnd = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="relative aspect-[2/2.5] w-full">
-                            <Image src="/IMG_7534.png" alt="Nurettin Öcel" fill className="object-cover rounded-lg" priority />
+                            <Image src="/IMG_7534.png" alt="Nurettin Öcel" draggable="false" fill className="object-cover rounded-lg" priority />
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -40,7 +40,14 @@ export const AboutEnd = () => {
                         {/* Reviews Section */}
                         <div className="flex items-center gap-5">
                             <div className="flex -space-x-5">
-                                <Image src="/reviewer.png" alt="Reviewer" width={80} height={80} className="rounded-full border-2 border-white" />
+                                <Image
+                                    src="/reviewer.png"
+                                    alt="Reviewer"
+                                    draggable="false"
+                                    width={80}
+                                    height={80}
+                                    className="rounded-full border-2 border-white"
+                                />
                             </div>
                             <div className="flex items-center gap-2">
                                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -59,7 +66,7 @@ export const AboutEnd = () => {
                             <p className="text-base sm:text-lg italic">
                                 &quot;Ich bin kein einfacher Webdesigner. Ich bin die beste Investition für dein Unternehmen.&quot;
                             </p>
-                            <Image src="/signature.png" alt="Signature" width={250} height={50} className="mt-2" />
+                            <Image src="/signature.png" alt="Signature" draggable="false" width={250} height={50} className="mt-2" />
                         </div>
 
                         {/* Name and Title */}
@@ -77,13 +84,9 @@ export const AboutEnd = () => {
                             whileTap={{ scale: 0.95 }}
                             className="bg-gradient-to-r from-orange-500 to-orange-300 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold flex items-center gap-2 hover:bg-orange-500 transition-colors">
                             Erstgespräch buchen
-                            <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path
-                                    fillRule="evenodd"
-                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
+                            <motion.span initial={{ x: 0 }} animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </motion.span>
                         </motion.button>
                     </motion.div>
                 </div>

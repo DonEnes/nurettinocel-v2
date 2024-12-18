@@ -64,7 +64,7 @@ const TestimonialCarousel = ({ testimonials }: { testimonials: Testimonial[] }) 
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        }, 5000);
+        }, 8000);
         return () => clearInterval(timer);
     }, [testimonials.length]);
 

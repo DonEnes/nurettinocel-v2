@@ -1,8 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 const features = [
     {
@@ -24,10 +25,44 @@ const features = [
 ];
 
 export const About = () => {
+    const [projectsCount, setProjectsCount] = useState(0);
+    const projectsRef = useRef(null);
+    const isInView = useInView(projectsRef, { once: true });
+
+    // Animation Control for Dashed Lines
+    const controls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start('visible');
+        }
+    }, [isInView, controls]);
+
+    // Hochzählen der Zahl
+    useEffect(() => {
+        if (isInView) {
+            let start = 0;
+            const end = 70;
+            const duration = 2000; // in ms
+            const increment = (end - start) / (duration / 10);
+
+            const counter = setInterval(() => {
+                setProjectsCount((prev) => {
+                    if (prev < end) {
+                        return Math.min(prev + increment, end);
+                    }
+                    clearInterval(counter);
+                    return end;
+                });
+            }, 10);
+        }
+    }, [isInView]);
+
     return (
         <section id="about" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
+                    {/* Image Section */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -37,10 +72,10 @@ export const About = () => {
                             <Image
                                 src="/IMG_7534.png"
                                 alt="Nurettin Öcel"
+                                draggable="false"
                                 fill
                                 className="object-cover"
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                draggable="false"
                             />
                         </div>
 
@@ -60,9 +95,10 @@ export const About = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.5, duration: 0.6 }}
-                            className="absolute bottom-0 -right-4 bg-white rounded-lg shadow-xl p-4 z-10">
+                            className="absolute bottom-0 -right-4 bg-white rounded-lg shadow-xl p-4 z-10"
+                            ref={projectsRef}>
                             <div className="flex items-center">
-                                <span className="text-2xl font-bold text-gray-800 mr-2">70</span>
+                                <span className="text-3xl font-bold text-gray-800">{Math.round(projectsCount)}</span>
                                 <span className="text-4xl text-orange-500">+</span>
                             </div>
                             <div className="text-sm text-gray-600">Webseiten entwickelt</div>

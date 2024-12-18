@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-4 gap-12">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                        <Image src="/nocel-black.png" alt="Nurettin Öcel Logo" width={150} height={40} />
+                        <Image src="/nocel-black.png" alt="Nurettin Öcel Logo" draggable="false" width={150} height={40} />
                         <p className="mt-4 text-black">Professionelle Webentwicklung und Design für Ihr Unternehmen.</p>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>

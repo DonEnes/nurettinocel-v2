@@ -29,7 +29,7 @@ export const Contact = () => {
     }; */
 
     return (
-        <section id="contact" className="py-20 bg-gradient-to-b from-white to-orange-50">
+        <section id="contact" className="py-20 bg-gradient-to-b from-white to-orange-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -42,10 +42,10 @@ export const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="flex flex-col lg:flex-row gap-12 items-start">
+                <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
                     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:w-1/3">
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-semibold mb-4">Kontaktinformationen</h3>
+                        <div className="bg-white p-12 rounded-lg shadow-lg">
+                            <h3 className="text-3xl font-semibold mb-4">Kontaktinformationen</h3>
                             <div className="space-y-4">
                                 <div className="flex items-center">
                                     <Mail className="w-6 h-6 text-orange-500 mr-3" />
@@ -57,7 +57,7 @@ export const Contact = () => {
                                 </div>
                                 <div className="flex items-center">
                                     <MessageSquare className="w-6 h-6 text-orange-500 mr-3" />
-                                    <span>Montag - Freitag, 9:00 - 18:00 Uhr</span>
+                                    <span>Montag - Freitag, 9:00 - 19:00 Uhr</span>
                                 </div>
                             </div>
                         </div>

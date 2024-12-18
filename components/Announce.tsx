@@ -5,7 +5,7 @@ import { Bell } from 'lucide-react';
 
 export const Announce = () => {
     return (
-        <section id="announcement" className="py-12 bg-gradient-to-r from-orange-600 to-orange-300">
+        <section id="announcement" className="py-6 bg-gradient-to-r from-orange-600 to-orange-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

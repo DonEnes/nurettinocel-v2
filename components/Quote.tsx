@@ -8,7 +8,7 @@ export const Quote = () => {
         <div className="relative h-96 flex items-center justify-center overflow-hidden">
             {' '}
             <div className="absolute inset-0">
-                <Image src="/backgrounds/plan.jpg" alt="Zitat Background" layout="fill" objectFit="cover" quality={100} />
+                <Image src="/backgrounds/plan.jpg" alt="Zitat Background" draggable="false" layout="fill" objectFit="cover" quality={100} />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-60" />
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
