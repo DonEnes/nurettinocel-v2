@@ -41,7 +41,7 @@ export const About = () => {
     // Hochzählen der Zahl
     useEffect(() => {
         if (isInView) {
-            let start = 0;
+            const start = 0;
             const end = 70;
             const duration = 2000; // in ms
             const increment = (end - start) / (duration / 10);
