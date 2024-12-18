@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className="relative min-h-[80vh] flex items-center overflow-hidden">
             <div className="absolute inset-0">
                 <Image src="/backgrounds/coden3.jpeg" alt="Hero Background" draggable="false" fill className="object-cover" quality={100} />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-950" />
 
                 {/* Vertical lines overlay */}
                 <div
