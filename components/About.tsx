@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
@@ -26,43 +26,41 @@ const features = [
 
 export const About = () => {
     const [projectsCount, setProjectsCount] = useState(0);
-    const projectsRef = useRef(null);
-    const isInView = useInView(projectsRef, { once: true });
+    const sectionRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    });
 
-    // Animation Control for Dashed Lines
-    const controls = useAnimation();
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 1]);
+    const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+    const background = useTransform(scrollYProgress, [0, 1], ['rgba(249, 115, 22, 0.2)', 'rgba(249, 115, 22, 1)']);
 
     useEffect(() => {
-        if (isInView) {
-            controls.start('visible');
-        }
-    }, [isInView, controls]);
-
-    // Hochzählen der Zahl
-    useEffect(() => {
-        if (isInView) {
-            const start = 0;
-            const end = 70;
-            const duration = 2000; // in ms
-            const increment = (end - start) / (duration / 10);
+        const timer = setTimeout(() => {
+            const endValue = 70;
+            const duration = 2000;
+            const increment = endValue / (duration / 16);
+            let currentValue = 0;
 
             const counter = setInterval(() => {
-                setProjectsCount((prev) => {
-                    if (prev < end) {
-                        return Math.min(prev + increment, end);
-                    }
+                currentValue += increment;
+                if (currentValue >= endValue) {
                     clearInterval(counter);
-                    return end;
-                });
-            }, 10);
-        }
-    }, [isInView]);
+                    setProjectsCount(endValue);
+                } else {
+                    setProjectsCount(Math.round(currentValue));
+                }
+            }, 16);
+        }, 500);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
-        <section id="about" className="py-20 bg-white">
+        <section ref={sectionRef} id="about" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
-                    {/* Image Section */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -79,7 +77,6 @@ export const About = () => {
                             />
                         </div>
 
-                        {/* Rating Badge */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -90,15 +87,13 @@ export const About = () => {
                             <div className="flex text-orange-500">{'★'.repeat(5)}</div>
                         </motion.div>
 
-                        {/* Projects Badge */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.5, duration: 0.6 }}
-                            className="absolute bottom-0 -right-4 bg-white rounded-lg shadow-xl p-4 z-10"
-                            ref={projectsRef}>
+                            className="absolute bottom-0 -right-4 bg-white rounded-lg shadow-xl p-4 z-10">
                             <div className="flex items-center">
-                                <span className="text-3xl font-bold text-gray-800">{Math.round(projectsCount)}</span>
+                                <span className="text-3xl font-bold text-gray-800">{projectsCount}</span>
                                 <span className="text-4xl text-orange-500">+</span>
                             </div>
                             <div className="text-sm text-gray-600">Webseiten entwickelt</div>
@@ -131,20 +126,27 @@ export const About = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                                     className="relative pl-20 pb-12 last:pb-0">
-                                    {/* Vertical dashed line */}
                                     {index !== features.length - 1 && (
-                                        <div
-                                            className="absolute left-8 top-12 w-0 h-[calc(100%-24px)] border-l-2 border-dashed border-orange-400/40"
-                                            style={{ transform: 'translateX(-50%)' }}
+                                        <motion.div
+                                            className="absolute left-8 top-12 w-0.5 h-[calc(100%-24px)]"
+                                            style={{
+                                                background,
+                                                transformOrigin: 'top',
+                                                scaleY: scrollYProgress,
+                                            }}
                                         />
                                     )}
 
-                                    {/* Circle with Check Icon */}
-                                    <div
-                                        className="absolute left-8 top-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
-                                        style={{ transform: 'translateX(-50%)' }}>
+                                    <motion.div
+                                        className="absolute left-8 top-0 w-12 h-12 rounded-full flex items-center justify-center"
+                                        style={{
+                                            background,
+                                            opacity,
+                                            scale,
+                                            x: '-50%',
+                                        }}>
                                         <Check className="w-6 h-6 text-white" />
-                                    </div>
+                                    </motion.div>
 
                                     <h3 className="text-2xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                                     <p className="text-lg text-gray-600">{feature.description}</p>
